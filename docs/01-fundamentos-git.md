@@ -20,7 +20,7 @@ Un repositorio (o "repo") es una carpeta cuyo contenido Git está vigilando. Den
 Clonar es descargar una copia completa de un repositorio (con todo su historial) a tu computador:
 
 ```bash
-git clone https://github.com/TU-USUARIO/GITHUB-WORKSHOP.git
+git clone https://github.com/Anderfg13/GITHUB-WORKSHOP.git
 cd GITHUB-WORKSHOP
 ```
 

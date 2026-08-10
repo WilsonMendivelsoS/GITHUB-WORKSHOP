@@ -36,7 +36,7 @@ Un buen PR responde, en su descripción: qué cambia, por qué era necesario, y 
 
 ## No hacer commit de todo
 
-Hay archivos que nunca deberían subirse a un repositorio: contraseñas, tokens, archivos generados automáticamente, carpetas pesadas de dependencias (`node_modules/`, por ejemplo). Para eso existe el archivo `.gitignore`, que le dice a Git qué ignorar.
+Hay archivos que nunca deberían subirse a un repositorio: contraseñas, tokens, archivos generados automáticamente, carpetas pesadas de dependencias (`node_modules/`, por ejemplo). Para eso existe el archivo `.gitignore`, que le dice a Git qué ignorar. Este tema es tan importante que tiene su propia guía: `06-gitignore-variables-entorno.md`.
 
 ## Antes de empezar a trabajar cada día
 

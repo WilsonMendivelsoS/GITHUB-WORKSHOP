@@ -9,6 +9,7 @@ Sigue estos ejercicios en orden. Cada uno tiene una señal de que lo hiciste bie
 - [ ] Ejercicio 4 — Merge
 - [ ] Ejercicio 5 — Proteger tu rama main
 - [ ] Ejercicio 6 — Un conflicto de verdad
+- [ ] Ejercicio 7 — .gitignore y variables de entorno
 
 ---
 
@@ -132,4 +133,22 @@ Lee `docs/04-proteccion-permisos.md` primero.
 
 ---
 
-Cuando termines los seis ejercicios, ya conoces el flujo completo que se usa en proyectos reales de equipo. Revisa `docs/05-buenas-practicas.md` para pulir el estilo de tu trabajo de ahora en adelante.
+## Ejercicio 7 — .gitignore y variables de entorno
+
+Lee `docs/06-gitignore-variables-entorno.md` primero.
+
+1. En la raíz del repositorio, copia la plantilla de variables de entorno:
+
+   ```bash
+   cp .env.example .env
+   ```
+
+2. Abre `.env` y cambia el valor de `SECRET_TOKEN` por cualquier texto, simulando un secreto real.
+3. Ejecuta `git status`.
+4. Ahora crea una rama, agrega un archivo cualquiera de prueba (por ejemplo `pruebas/temporal.log`) y confirma que tampoco aparece en `git status` gracias a la regla `*.log` del `.gitignore`.
+
+**Señal de éxito:** ni `.env` ni `pruebas/temporal.log` aparecen listados por `git status`, aunque los dos existen en tu carpeta. Si `.env` sí aparece, revisa que el archivo `.gitignore` esté en la raíz del repositorio.
+
+---
+
+Cuando termines los siete ejercicios, ya conoces el flujo completo que se usa en proyectos reales de equipo. Revisa `docs/05-buenas-practicas.md` para pulir el estilo de tu trabajo de ahora en adelante.
