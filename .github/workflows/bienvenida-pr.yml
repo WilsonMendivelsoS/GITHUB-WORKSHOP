@@ -1,0 +1,38 @@
+name: "🚀 Bienvenida al Pull Request"
+
+on:
+  pull_request:
+    types: [opened]
+
+permissions:
+  pull-requests: write
+
+jobs:
+  comentar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Comentar en el Pull Request
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const nombre = context.payload.pull_request.user.login;
+            const rama = context.payload.pull_request.head.ref;
+            const mensaje = [
+              `### 🎉 ¡Felicidades, @${nombre}!`,
+              "",
+              `Abriste tu Pull Request desde la rama \`${rama}\`. Este es un paso clave en el flujo de trabajo con GitHub.`,
+              "",
+              "**Checklist antes de pedir revisión:**",
+              "- [ ] Probaste tus cambios",
+              "- [ ] El título del PR describe claramente qué hiciste",
+              "- [ ] La descripción explica qué cambia y por qué",
+              "",
+              "Cuando el equipo apruebe los cambios, podrás hacer el merge. ¡Sigue así! 🚀"
+            ].join("\n");
+
+            github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: mensaje
+            });

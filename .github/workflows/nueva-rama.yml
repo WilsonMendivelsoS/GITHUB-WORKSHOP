@@ -1,0 +1,25 @@
+name: "🌱 Nueva rama"
+
+on:
+  create
+
+jobs:
+  celebrar-rama:
+    if: github.ref_type == 'branch'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Mensaje de felicitación
+        run: |
+          echo "🎉 ¡Felicidades! Creaste la rama '${{ github.ref_name }}'."
+          {
+            echo "## 🎉 ¡Felicidades!"
+            echo ""
+            echo "Acabas de crear la rama **${{ github.ref_name }}**."
+            echo ""
+            echo "Ya diste tu primer paso trabajando con ramas en Git. Ahora puedes:"
+            echo ""
+            echo "- Hacer cambios en tus archivos"
+            echo "- Confirmarlos con \`git commit\`"
+            echo "- Subirlos con \`git push -u origin ${{ github.ref_name }}\`"
+            echo "- Abrir un Pull Request cuando estés listo"
+          } >> "$GITHUB_STEP_SUMMARY"

@@ -1,0 +1,12 @@
+# Este archivo define quién es "dueño" de qué partes del repositorio.
+# Cuando alguien abre un Pull Request que toca esas rutas, GitHub pide
+# automáticamente la revisión del dueño asignado (si activas la regla
+# "Require review from Code Owners" en Settings → Branches).
+#
+# Formato: ruta   @usuario-o-equipo
+#
+# Ejemplos (descomenta y ajusta con tu usuario real para probarlo):
+#
+# *                     @tu-usuario
+# /docs/                @tu-usuario
+# /.github/workflows/   @tu-usuario
